@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="view" content="width=device_width,initial-scale-1.0">
+    <title>for resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="mainDiv">
+  <!--career objective div -->
+  <div class="subDiv">
+      <h1>career objective</h1>
+      <select id="career" name="career">
+        <option>select your carrer object</option>
+        <option>to utilize my knowledge for growth of organization</option>
+        <option>to secure a challenging position in a</option>
+
+
+      </select>
+    </div>
+    <!--personal information-->
+    <div class="subDiv1">
+    <h1>personal information</h1>
+    <input type="text" name="name" id="name" placeholder="enter your name">
+    <input type="number" name="phone" id="phone" placeholder="enter your number">
+    <input type="text" name="email"  id="email" placeholder="enter your email">
+    </div>
+    <!--educational details-->
+<div class="subDiv1">
+<h1>postgraduation details</h1>
+  <label for="pgbranch">
+  <select id="pgbranch" name="pgbranch">
+  <option>select your branch</option>
+  <option>MCA</option>
+  <option>MBA</option>
+  <option>MSC</option>
+ </select>
+  </label>
+  <label for="pginst">
+    <input type="text" name="pginst"  id="pginst" placeholder="Enter your branch">
+    </label>
+    <label for="pgper">
+    <input type="text" name="pgper" id="pgper" placeholder="enter your percentage">
+      </label>
+      <label for="text" name="pgyop" id="pgyop" placeholder="enter your year of passing">
+      </label>
+      </div>
+      <!--graduation details-->
+      <div class="subDiv1">
+      <h1>graduation details</h1>
+      <label for="gbranch">
+      <select id="gbranch" name="gbranch">
+      <option>select your branch</option>
+      <option>BSC</option>
+      <option>BCOM</option>
+      <optioN>BA</option>
+      </select>
+      </label>
+      <label for="ginst">
+      <input type="text" name="ginst"  id="ginst" placeholder="Enter your name">
+      </label>
+      <label for="gper">
+      <input type="text" name="gper" id="gper" placeholder="enter your percentage">
+      </label>
+      <label for="gyop">
+      <label for="text" name="gyop" id="gyop" placeholder="enter your year of passing">
+      </label>
+      </div>
+
+    <!--intermediate details-->
+    <div class="subDiv1">
+    <h1>intermediate details</h1>
+    <label for="intermediate branch">
+    <select id="intermediatebranch" name="intermediate branch">
+    <option>select your branch</option>
+    <option>M.P.C</option>
+    <option>B.I.P.C</option>
+    <option>H.E.C</option>
+  </select>
+    </label>
+
+    <label for="intermediateinst">
+    <input type="text" name="intermediateinst"  id="intermediateinst" placeholder="Enter your branch">
+    </label>
+  <label for="intermediateper">
+   <input type="text" name="intermediateper" id="intermediateper" placeholder="enter your percentage">
+   </label>
+    <label for="text" name="intermediateyop" id="intermediateyop" placeholder="enter your year of passing">
+    </label>
+    </div>
+  <!--ssc details-->
+
+  <div class="subDiv1">
+  <h1>ssc details</h1>
+  <label for="sscbranch">
+  <select id="sscbranch" name="ssc branch">
+  <option>select your branch</option>
+  <option>state syllabus</option>
+  <option>central syllabus</option>
+  </label>
+  </select>
+  <label for="sscdetails">
+  <input type="text" name="sscinst"  id="sscinst" placeholder="enter your branch">
+  </label>
+  <label for="sscper">
+  <input type="text" name="sscper" id="sscper" placeholder="enter your percentage">
+  </label>
+  <label for="sscyop">
+  <input type="text" name="sscyop" id="sscyop" placeholder="enter your year of passing">
+  </label>
+  </div>
+  <!--achievements-->
+  <div class="subDiv1">
+    <h1>achievements</h1>
+<label for="ache">
+  <input type="text" name="ache" id="ache">
+</label>
+
+<label for="ache1">
+  <input type="text" name="ache1" id="ache1">
+</label>
+
+<label for="ache2">
+  <input type="text" name="ache2" id="ache2">
+</label>
+  </div>
+
+</div>
+  <button type="button" name="button" onclick="submitdata()">SUBMIT</button>
+  </body>
+</html>
+<script type="text/javascript">
+  function submitdata() {
+    var carrer=document.getElementById('career').value;
+
+    var name=document.getElementById('name').value;
+    var phone=document.getElementById('phone').value;
+    var email=document.getElementById('email').value;
+
+var pgbranch=document.getElementById('pgbranch').value;
+    var pginst=document.getElementById('pginst').value;
+    var pgper=document.getElementById('pgper').value;
+    var pgyop=document.getElementById('pgyop').value;
+
+var gbranch=document.getElementById('gbranch').value;
+    var ginst=document.getElementById('ginst').value;
+    var gper=document.getElementById('gper').value;
+    var gyop=document.getElementById('gyop').value;
+
+var intermediatebranch=document.getElementById('intermediatebranch').value;
+    var intermediateinst=document.getElementById('intermediateinst').value;
+    var intermediateper=document.getElementById('intermediateper').value;
+    var  intermediateyop=document.getElementById('intermediateyop').value;
+
+var sscbranch = document.getElementById('sscbranch').value;
+    var sscinst = document.getElementById('sscinst').value;
+    var sscper = document.getElementById('sscper').value;
+    var  sscyop = document.getElementById('sscyop').value;
+
+    var ache = document.getElementById('ache').value;
+    var ache1 = document.getElementById('ache1').value;
+    var  ache2 = document.getElementById('ache2').value;
+
+var sietk;
+var result;
+var store;
+var tx;
+    var indexedDb= window.indexedDB || windows.mozIndexedDB ||
+                 window.webkitIndexedDB|| window.msIndexedDB;
+  //db creation
+  sietk = indexedDB.open("mydb",1);
+  sietk.onerror=function (e) {
+    console.log("error"+e);
+
+  }
+  sietk.onupgradeneeded = function (e) {
+  result = e.target.result;
+  store=result.createObjectStore ("resume",{keyPath:"name"});
+  }
+  sietk.onsuccess = function (e) {
+    result =e.target.result;
+    tx = result.transaction("resume",'readwrite');
+    store=tx.objectStore("resume");
+    store.put({
+      carrer:carrer,
+      name:name,
+      phone:phone,
+      email:email,
+      education :[
+        {
+          course:pgbranch,
+          institute:pginst,
+          percentage:pgper,
+          yearofpassing:pgyop
+
+        },
+        {
+          course:gbranch,
+          institute:ginst,
+          percentage:gper,
+          yearofpassing:gyop
+        },
+        {
+          course:intermediatebranch,
+          institute:intermediateinst,
+          percentage:intermediateper,
+          yearofpassing:intermediateyop
+        },
+        {
+          course:sscbranch,
+          institute:sscinst,
+          percentage:sscper,
+          yearofpassing:sscyop
+        }
+      ],
+      achievements:[
+        {
+          achieve : ache
+        },
+        {
+          achieve : ache1
+        },
+        {
+          achieve :ache2
+        }
+      ]
+
+    })
+    window.alert("data submitted");
+    window.open("index.html");
+
+  }
+  }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <center><title>resume building</title></center>
+  </head>
+  <body>
+    <header>
+      <h1>resume building</h1>
+    </header>
+    <a href="form.html"><img src="image.png" alt="prashu"></a>
+    <div class="parent">
+
+    </div>
+  </body>
+</html>
+<script type="text/javascript" src="main.js">
+if ('serviceworker' in navigator){
+navigator.serviceworker.register('sworker.js')
+.then((register)=>){
+
+register.addEventListener('update found',()=>{
+var installingsw = register.installingsw;
+console.log("serviceworker is installing",installingsw)
+});
+});
+.catch((e)=>{
+  console.log("error"+e);
+})
+}
+else {
+  console.log("browser not supported serviceworker")
+}
+</script>
